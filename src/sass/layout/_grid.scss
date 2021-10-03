@@ -1,0 +1,48 @@
+.container {
+    min-height: inherit;
+
+    > .content {
+        height: inherit;
+        min-height: inherit;
+
+        > * {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+            width: calc(100% - 30px);
+            max-width: none;
+            
+            @include sm {
+                max-width: 540px;
+            }
+            
+            @include md {
+                max-width: 720px;
+            }
+            
+            @include lg {
+                max-width: 960px;
+            }
+            
+            @include xl {
+                max-width: 1140px;
+            }
+            
+            @include xxl {
+                max-width: 1320px;
+            }
+        }
+
+        .grid {
+            display: grid;
+            gap: 3rem;
+
+            .cell {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
