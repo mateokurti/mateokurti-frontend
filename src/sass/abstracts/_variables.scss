@@ -1,0 +1,43 @@
+$topBarHeight: 70px;
+
+$colors: (
+    brand: (
+        base: rgba(0, 10, 19, 1),
+        //base: rgba(31, 71, 193, 1),
+        dark: rgba(0, 10, 19, 1),
+        light: rgba(255, 255, 255, 1)
+    ),
+    grey: (
+        dark: #444,
+        base: #666,
+        light: #999
+    )
+);
+
+// Screen Widths based on Bootstrap Griding
+$screen-widths: (
+    xs: (
+        min: 0px,
+        max: 576px,
+    ),
+    sm: (
+        min: 576px,
+        max: 768px
+    ),
+    md: (
+        min: 768px,
+        max: 992px
+    ),
+    lg: (
+        min: 992px,
+        max: 1200px
+    ),
+    xl: (
+        min: 1200px,
+        max: 1400px
+    ),
+    xxl: (
+        min: 1400px,
+        max: 5000px
+    )
+);

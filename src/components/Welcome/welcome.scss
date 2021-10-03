@@ -1,0 +1,164 @@
+@import "src/sass/global";
+
+section#welcome {
+    height: calc(100vh - #{$topBarHeight});
+    background-color: color("brand", "dark");
+
+    > .content {
+        > .block {
+            &.arrow {
+                a {
+                    span {
+                        position: absolute;
+                        z-index: 2;
+                        
+                        bottom: 50px;
+                        left: 50%;
+                        
+                        width: 24px;
+                        height: 24px;
+                        
+                        margin-left: -12px;
+                        
+                        border-left: 1px solid #fff;
+                        border-bottom: 1px solid #fff;
+                        
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                        
+                        -webkit-animation: arrowJump 1s infinite;
+                        animation: arrowJump 1s infinite;
+                        
+                        box-sizing: border-box;
+                    }
+                }
+            }
+
+            &.parallax {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+
+                .particles {
+                    height: inherit;
+                    overflow: inherit;
+                }
+
+                .introduction {
+                    width: 100%;
+                    height: calc(100% + 70px);
+                    
+                    position: absolute;
+                    top: -$topBarHeight;
+                    z-index: 1;
+                    overflow: hidden;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    p {
+                        color: white;
+                        font-weight: 200;
+                        position: relative;
+
+                        &.heading {
+                            font-size: 40px;
+                            font-weight: 500;
+
+                            @include md {
+                                font-size: 45px;
+                            }
+                        }
+
+                        &.sub-heading {
+                            font-size: 30px;
+                            letter-spacing: 3px;
+                            top: -5px;
+
+                            @include md {
+                                font-size: 35px;
+                            }
+                        }
+                    }
+
+                    .buttons-container {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 20px;
+
+                        .button {
+                            padding: 7px 30px;
+                            border: white .7px solid;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            margin: 0 10px;
+                            transition: all .3s ease;
+                            -webkit-transition: all .3s ease;
+                            cursor: pointer;
+
+                            p {
+                                font-size: 15px;
+                                font-weight: 300;
+                                transition: all .3s ease;
+                                -webkit-transition: all .3s ease;
+                            }
+
+                            &.light {
+                                background-color: color("brand", "light");
+                                
+                                p {
+                                    color: color("brand", "dark");
+                                }
+                            }
+
+                            &.dark {
+                                background-color: color("brand", "dark");
+
+                                &:hover {
+                                    background-color: color("brand", "light");
+
+                                    p {
+                                        color: color("brand", "dark");
+                                    }
+                                }
+                                
+                                p {
+                                    color: color("brand", "light");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @-webkit-keyframes arrowJump {
+        0% {
+            -webkit-transform: rotate(-45deg) translate(0, 0);
+        }
+        20% {
+            -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+        }
+        40% {
+            -webkit-transform: rotate(-45deg) translate(0, 0);
+        }
+    }
+    
+    @keyframes arrowJump {
+        0% {
+            transform: rotate(-45deg) translate(0, 0);
+        }
+        20% {
+            transform: rotate(-45deg) translate(-10px, 10px);
+        }
+        40% {
+            transform: rotate(-45deg) translate(0, 0);
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import "src/sass/global";
+
+.menu-content {
+    width: 100vw;
+    right: -100vw;
+    height: 100vh;
+    background-color: color("brand", "light");
+    position: fixed;
+    margin-top: $topBarHeight;
+    padding: 50px 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+
+    @include sm {
+        width: 350px;
+        right: -500px;
+    }
+
+    &.active {
+        right: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: color("brand", "dark");
+        font-size: 30px;
+        width: 80%;
+        text-align: center;
+
+        @include sm {
+            text-align: left;
+        }
+
+        li {
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: solid 4px transparent;
+            border-right: solid 4px transparent;
+
+            a {
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &.active {
+                border-left: solid 4px color("brand", "dark");
+                font-weight: 500;
+            }
+
+            &.disabled {
+                color:rgba(0, 0, 0, .3);
+            }
+
+            &:hover:not(.disabled) {
+                font-weight: 500;
+
+                @include sm {
+                    border-left: solid 4px color("brand", "dark");
+                }
+            }
+        }
+    }
+}

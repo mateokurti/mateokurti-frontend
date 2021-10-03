@@ -1,0 +1,53 @@
+@import "src/sass/global";
+
+section#about {
+    background-color: color("brand", "light");
+
+    > .content {
+        > .block {
+            min-height: inherit;
+
+            &.grid {
+                grid-template-columns: 1fr;
+                grid-template-areas: "text" "media";
+                justify-items: center;
+                align-items: center;
+    
+                @include md {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "text media";
+                }
+    
+                .cell {
+                    &.text {
+                        grid-area: text;
+                        text-align: center;
+    
+                        @include md {
+                            text-align: left;
+                        }
+
+                        .title {
+                            font-size: 35px;
+                        }
+
+                        .greeting {
+                            margin-top: 15px;
+                            margin-bottom: 5px;
+                            font-size: 18px;
+                        }
+                    }
+    
+                    &.media {
+                        grid-area: media;
+                        text-align: center;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

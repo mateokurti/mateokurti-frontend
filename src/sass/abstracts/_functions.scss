@@ -1,0 +1,7 @@
+@function color($color, $tone: 'base') {
+    @return map-get(map-get($colors, $color), $tone);
+}
+
+@function screen-width($screen, $bound: 'min') {
+    @return map-get(map-get($screen-widths, $screen), $bound);
+}
