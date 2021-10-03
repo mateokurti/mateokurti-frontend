@@ -1,0 +1,100 @@
+@import "src/sass/global";
+
+.menu {
+    width: 100%;
+    height: $topBarHeight;
+    color: color("brand", "light");
+    background-color: color("brand", "dark");
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+
+    .wrapper {
+        height: $topBarHeight;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                font-size: 30px;
+                font-weight: 700;
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        .right {
+            .menu-icon-container {
+                width: $topBarHeight;
+                height: $topBarHeight;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                cursor: pointer;
+
+                .menu-icon {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+
+                    span {
+                        width: 40px;
+                        height: 3px;
+                        margin: 3px 0;
+                        background-color: white;
+                        transform-origin: center;
+                        transition: all .5s ease;
+                        -webkit-transition: all .5s ease;
+
+                        &:nth-child(2) {
+                            width: 30px;
+                        }
+
+                        &:nth-child(3) {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        color: color("brand", "dark");
+        background-color: color("brand", "light");
+
+        .menu-icon-container {
+
+            .menu-icon {
+                span {
+                    &:nth-child(1) {
+                        transform: translateY(9px) rotate(45deg);
+                        background-color: color("brand", "dark");
+                        width: 40px !important;
+                    }
+
+                    &:nth-child(2) {
+                        background: transparent;
+                    }
+
+                    &:nth-child(3) {
+                        transform: translateY(-9px) rotate(-45deg);
+                        background-color: color("brand", "dark");
+                        width: 40px !important;
+                    }
+                }
+            }
+        }
+    }
+}
