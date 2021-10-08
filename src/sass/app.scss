@@ -7,9 +7,6 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 
     ::-moz-selection { /* Code for Firefox */
         color: color('brand', 'light');
@@ -24,6 +21,7 @@
 
 body {
     background-color: color('brand', 'dark');
+    scroll-behavior: smooth;
 }
 
 .app {
