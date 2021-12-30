@@ -17,7 +17,7 @@ export default function Welcome() {
                     <Particles className="layer particles" params={particlesData} />
                     <div className="layer introduction">
                         <p className="heading">Mateo Kurti</p>
-                        <p className="sub-heading">Software Developer</p>
+                        <p className="sub-heading">Software Engineer</p>
                         <div className="buttons-container">
                             <a href="#about" className="button dark">
                                 <p>about me</p>
