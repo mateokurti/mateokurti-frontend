@@ -22,7 +22,7 @@ export default function Welcome() {
                             <a href="#about" className="button dark">
                                 <p>about me</p>
                             </a>
-                            <a href="#contact" className="button light">
+                            <a href="mailto:hello@mateokurti.com" className="button light">
                                 <p>get in touch</p>
                             </a>
                         </div>
