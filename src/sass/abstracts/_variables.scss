@@ -1,16 +1,17 @@
 $topBarHeight: 70px;
 
 $colors: (
-    brand: (
-        base: rgba(0, 10, 19, 1),
-        //base: rgba(31, 71, 193, 1),
-        dark: rgba(0, 10, 19, 1),
-        light: rgba(255, 255, 255, 1)
+    "brand": (
+        "base": rgba(0, 10, 19, 1),
+        //"base": rgba(31, 71, 193, 1),
+        "dark": rgba(0, 10, 19, 1),
+        "light": rgba(255, 255, 255, 1)
     ),
-    grey: (
-        dark: #444,
-        base: #666,
-        light: #999
+    "grey": (
+        "dark": rgb(68, 68, 68),
+        "base": rgb(102, 102, 102),
+        "light": rgb(153, 153, 153),
+        "extra-light": rgb(245, 245, 245)
     )
 );
 

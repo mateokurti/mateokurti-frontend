@@ -8,10 +8,9 @@ export default function Menu({ menuOpen, setMenuOpen }) {
             <ul>
                 <li><a href="#welcome" onClick={() => setMenuOpen(false)}>Welcome</a></li>
                 <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-                {/* <li><a href="#career" onClick={() => setMenuOpen(false)}>Career</a></li>
-                <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-                <li><a href="#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</a></li> */}
-                <li className="disabled">Career</li>
+                <li><a href="#career" onClick={() => setMenuOpen(false)}>Career</a></li>
+                {/* <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li> */}
+                {/* <li><a href="#testimonials" onClick={() => setMenuOpen(false)}>Testimonials</a></li> */}
                 <li className="disabled">Projects</li>
                 <li className="disabled">Testimonials</li>
                 <li><a href="mailto:hello@mateokurti.com" onClick={() => setMenuOpen(false)}>Contact</a></li>

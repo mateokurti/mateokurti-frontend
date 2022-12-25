@@ -4,6 +4,7 @@ import TopBar from './components/Topbar/Topbar';
 import Menu from './components/Menu/Menu';
 import Welcome from './components/Welcome/Welcome';
 import About from './components/About/About';
+import Career from './components/Career/Career';
 
 import { useState } from 'react';
 
@@ -17,6 +18,7 @@ function App() {
       <div className="sections">
         <Welcome />
         <About />
+        <Career />
       </div>
     </div>
   );

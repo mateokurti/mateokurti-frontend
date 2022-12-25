@@ -1,0 +1,101 @@
+@import "src/sass/global";
+
+section#career {
+    background-color: color("brand", "light");
+
+    > .content {
+        > .block {
+            min-height: inherit;
+
+            &.grid {
+                grid-template-columns: 1fr;
+                grid-template-areas: "content" "media";
+                justify-items: center;
+                align-items: start;
+    
+                @include md {
+                    grid-template-columns: 33% 67%;
+                    grid-template-areas: "media content";
+                }
+
+                .cell {
+                    &.media {
+                        position: sticky;
+                        top: $topBarHeight;
+                        height: calc(100vh - #{$topBarHeight});
+                        grid-area: media;
+                        justify-self: start;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &.content {
+                        grid-area: content;
+                        text-align: left;
+    
+                        @include lg {
+                            text-align: left;
+                        }
+
+                        ul.experience {
+                            > li {
+                                grid-template-columns: 1fr 9fr;
+                                gap: 1rem;
+                                justify-items: center;
+                                padding: 20px 30px;
+                                border-radius: 3%;
+                                text-align: left;
+
+                                .cell {
+                                    margin: 0;
+                                    justify-self: start;
+                                }
+
+                                figure.cell {
+                                    display: grid;
+                                    justify-items: center;
+                                    align-items: start;
+                                    grid-template-rows: max-content;
+
+                                    img {
+                                        width: 100%;
+                                    }
+
+                                    .vl {
+                                        border-left: 3px solid color("brand");
+                                        height: 90%;
+                                        align-self: end;
+                                    }
+                                }
+
+                                .header {
+                                    .title {
+                                        font-size: 20px;
+                                    }
+                                }
+                                .details {
+                                    p {
+                                        font-size: 14px;
+                                        font-weight: 300;
+                                        color: color("grey", "base");
+                                    }
+
+                                    .description {
+                                        font-size: 14px;
+
+                                        * {
+                                            padding: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
