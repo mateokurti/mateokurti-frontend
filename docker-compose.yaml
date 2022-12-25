@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  frontend:
+    build: .
+    command: npm start
+    volumes:
+      - ./src:/app/src
+      - ./public/assets:/app/public/assets
+    ports:
+      - 3000:3000
+    restart: "no"
